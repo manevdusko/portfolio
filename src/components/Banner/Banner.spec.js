@@ -34,6 +34,7 @@ describe("Banner Component", () => {
     );
 
     // Check if the "Contact me" button has the correct link
+    // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByText("Contact me").closest("a")).toHaveAttribute(
       "href",
       "/#connect"

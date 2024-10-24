@@ -26,12 +26,14 @@ describe("NavBar Component", () => {
     expect(screen.getByText("Contact me")).toBeInTheDocument();
 
     // Check if the LinkedIn link is rendered
+    // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByAltText("Linkedin").closest("a")).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/manevdusko/"
     );
 
     // Check if the mailto link is rendered
+    // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByAltText("Email").closest("a")).toHaveAttribute(
       "href",
       "mailto:dushkomanev9@gmail.com"

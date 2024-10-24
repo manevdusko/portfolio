@@ -71,6 +71,7 @@ describe("Contact Component", () => {
       target: { value: "Hello!" },
     });
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       fireEvent.click(screen.getByText("Send"));
     });
@@ -103,6 +104,7 @@ describe("Contact Component", () => {
       target: { value: "Hello!" },
     });
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       fireEvent.click(screen.getByText("Send"));
     });

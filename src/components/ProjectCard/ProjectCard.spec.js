@@ -28,6 +28,7 @@ describe("ProjectCard Component", () => {
 
     // Check if the GitHub link is rendered
     expect(screen.getByText("Check this project")).toBeInTheDocument();
+    // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByText("Check this project").closest("a")).toHaveAttribute(
       "href",
       props.githubLink

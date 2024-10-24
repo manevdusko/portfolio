@@ -78,7 +78,11 @@ export const NavBar = () => {
           </Nav>
           <span className={styles.navbarText}>
             <div className={styles.socialIcon}>
-              <a href="https://www.linkedin.com/in/manevdusko/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/manevdusko/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={linkedinIcon} alt="Linkedin" />
               </a>
               <a
