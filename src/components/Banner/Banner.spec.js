@@ -18,7 +18,9 @@ describe("Banner Component", () => {
     expect(screen.getByText("Hi! I'm Dushko,")).toBeInTheDocument();
 
     // Check if the description is rendered
-    expect(screen.getByText(/I'm a front-end developer with/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/I'm a front-end developer with/)
+    ).toBeInTheDocument();
 
     // Check if the "Contact me" button is rendered
     expect(screen.getByText("Contact me")).toBeInTheDocument();
@@ -32,6 +34,9 @@ describe("Banner Component", () => {
     );
 
     // Check if the "Contact me" button has the correct link
-    expect(screen.getByText("Contact me").closest('a')).toHaveAttribute('href', '/#connect');
+    expect(screen.getByText("Contact me").closest("a")).toHaveAttribute(
+      "href",
+      "/#connect"
+    );
   });
 });

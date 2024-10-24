@@ -7,7 +7,7 @@ describe("ProjectCard Component", () => {
     title: "Sample Project",
     description: "This is a sample project description.",
     imgUrl: "https://via.placeholder.com/150",
-    githubLink: "https://github.com/sample/sample-project"
+    githubLink: "https://github.com/sample/sample-project",
   };
 
   test("renders ProjectCard component with title, description, and image", () => {
@@ -28,7 +28,10 @@ describe("ProjectCard Component", () => {
 
     // Check if the GitHub link is rendered
     expect(screen.getByText("Check this project")).toBeInTheDocument();
-    expect(screen.getByText("Check this project").closest('a')).toHaveAttribute('href', props.githubLink);
+    expect(screen.getByText("Check this project").closest("a")).toHaveAttribute(
+      "href",
+      props.githubLink
+    );
   });
 
   test("does not render GitHub link when not provided", () => {

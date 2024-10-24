@@ -29,50 +29,75 @@ export const NavBar = () => {
   };
 
   return (
-      <Navbar expand="md" className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-        <Container>
-          <Navbar.Brand href="/">
+    <Navbar
+      expand="md"
+      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
+    >
+      <Container>
+        <Navbar.Brand href="/">
           <span className={`${styles.logo}`}>m@nev</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className={styles.navbarTogglerIcon}></span>
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link
-                href="#home"
-                className={activeLink === "home" ? `${styles.active} ${styles.navbarLink}` : styles.navbarLink}
-                onClick={() => onUpdateActiveLink("home")}
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className={styles.navbarTogglerIcon}></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              href="#home"
+              className={
+                activeLink === "home"
+                  ? `${styles.active} ${styles.navbarLink}`
+                  : styles.navbarLink
+              }
+              onClick={() => onUpdateActiveLink("home")}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              href="#skills"
+              className={
+                activeLink === "skills"
+                  ? `${styles.active} ${styles.navbarLink}`
+                  : styles.navbarLink
+              }
+              onClick={() => onUpdateActiveLink("skills")}
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className={
+                activeLink === "projects"
+                  ? `${styles.active} ${styles.navbarLink}`
+                  : styles.navbarLink
+              }
+              onClick={() => onUpdateActiveLink("projects")}
+            >
+              Projects
+            </Nav.Link>
+          </Nav>
+          <span className={styles.navbarText}>
+            <div className={styles.socialIcon}>
+              <a href="https://www.linkedin.com/in/manevdusko/" target="_blank">
+                <img src={linkedinIcon} alt="Linkedin" />
+              </a>
+              <a
+                href="mailto:dushkomanev9@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Home
-              </Nav.Link>
-              <Nav.Link
-                href="#skills"
-                className={activeLink === "skills" ? `${styles.active} ${styles.navbarLink}` : styles.navbarLink}
-                onClick={() => onUpdateActiveLink("skills")}
-              >
-                Skills
-              </Nav.Link>
-              <Nav.Link
-                href="#projects"
-                className={activeLink === "projects" ? `${styles.active} ${styles.navbarLink}` : styles.navbarLink}
-                onClick={() => onUpdateActiveLink("projects")}
-              >
-                Projects
-              </Nav.Link>
-            </Nav>
-            <span className={styles.navbarText}>
-              <div className={styles.socialIcon}>
-                <a href="https://www.linkedin.com/in/manevdusko/" target="_blank"><img src={linkedinIcon} alt="Linkedin" /></a>
-                <a href="mailto:dushkomanev9@gmail.com" target="_blank" rel="noopener noreferrer"><img src={emailIcon} alt="Email" /></a>
-              </div>
-              <HashLink to='#connect'>
-                <button className={styles.vvd}><span>Contact me</span></button>
-              </HashLink>
-            </span>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+                <img src={emailIcon} alt="Email" />
+              </a>
+            </div>
+            <HashLink to="#connect">
+              <button className={styles.vvd}>
+                <span>Contact me</span>
+              </button>
+            </HashLink>
+          </span>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

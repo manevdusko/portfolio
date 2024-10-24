@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 import MyDeskIcon from "../../assets/img/MyDesk.jpg";
@@ -10,7 +10,7 @@ import PortfolioImage from "../../assets/img/Portfolio.png";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import styles from './Projects.module.css';
+import styles from "./Projects.module.css";
 
 export const Projects = () => {
   const projects = [
@@ -59,7 +59,7 @@ export const Projects = () => {
 
   return (
     <section className={styles.project} id="projects">
-      <Container >
+      <Container>
         <Row>
           <Col size={12}>
             <TrackVisibility>
@@ -89,12 +89,18 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="Professional-Work" className={styles.tab}>
+                        <Nav.Link
+                          eventKey="Professional-Work"
+                          className={styles.tab}
+                        >
                           Industry Experience
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="Personal-Work" className={styles.tab}>
+                        <Nav.Link
+                          eventKey="Personal-Work"
+                          className={styles.tab}
+                        >
                           Side Projects
                         </Nav.Link>
                       </Nav.Item>

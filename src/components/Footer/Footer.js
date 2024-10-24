@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import linkedinIcon from "../../assets/img/linkedin-icon.svg";
 import mailIcon from "../../assets/img/email-icon.svg";

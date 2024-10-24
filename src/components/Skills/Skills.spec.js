@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Skills from "./Skills";
 
 // Mock Carousel component
-jest.mock('react-multi-carousel', () => {
+jest.mock("react-multi-carousel", () => {
   return ({ children }) => <div>{children}</div>;
 });
 

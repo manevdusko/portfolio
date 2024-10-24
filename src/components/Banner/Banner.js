@@ -5,7 +5,7 @@ import headerImg from "../../assets/img/astronaut.webp";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import styles from './Banner.module.css';
+import styles from "./Banner.module.css";
 import { HashLink } from "react-router-hash-link";
 
 export const Banner = () => {
@@ -18,12 +18,13 @@ export const Banner = () => {
     "Software Engineer",
     "React Developer",
     "Front-End Developer",
-    "Full-Stack Developer"
-  ];  
+    "Full-Stack Developer",
+  ];
   const period = 2000;
   const yearsOfExperience = Math.ceil(
     ((new Date().getFullYear() - new Date(2022, 0).getFullYear()) * 12 +
-      (new Date().getMonth() - new Date(2022, 0).getMonth())) / 12
+      (new Date().getMonth() - new Date(2022, 0).getMonth())) /
+      12
   );
 
   useEffect(() => {
@@ -62,7 +63,6 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-  
 
   return (
     <section className={styles.banner} id="home">
@@ -76,31 +76,33 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className={styles.tagline}>Welcome to my Portfolio</span>
+                  <span className={styles.tagline}>
+                    Welcome to my Portfolio
+                  </span>
                   <h1>
                     {`Hi! I'm Dushko, `}{" "}
                     <span
                       className={styles.txtRotate}
-                      
-                      dataperiod ="1000"
+                      dataperiod="1000"
                       data-rotate='[ "Software Engineer", "React Developer", "Front-End Developer", "Full-Stack Developer" ]'
                     >
                       <span className={styles.wrap}>{text}</span>
                     </span>
                   </h1>
                   <p>
-                    I'm a front-end developer with {yearsOfExperience} years of experience in
-                    React, HTML, CSS, JavaScript, and TypeScript. I focus on
-                    building modern, responsive web apps with clean design and
-                    great user experience. With additional experience in Java
-                    Spring Boot and .NET, I'm comfortable handling full-stack
-                    projects. I love solving problems through code and am
-                    currently learning Flutter to expand my skill set.
+                    I'm a front-end developer with {yearsOfExperience} years of
+                    experience in React, HTML, CSS, JavaScript, and TypeScript.
+                    I focus on building modern, responsive web apps with clean
+                    design and great user experience. With additional experience
+                    in Java Spring Boot and .NET, I'm comfortable handling
+                    full-stack projects. I love solving problems through code
+                    and am currently learning Flutter to expand my skill set.
                   </p>
-                  <HashLink to='#connect'>
-                  <button>
-                    Contact me <ArrowRightCircle size={25} />
-                  </button></HashLink>
+                  <HashLink to="#connect">
+                    <button>
+                      Contact me <ArrowRightCircle size={25} />
+                    </button>
+                  </HashLink>
                 </div>
               )}
             </TrackVisibility>

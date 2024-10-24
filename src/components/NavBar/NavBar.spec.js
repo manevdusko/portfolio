@@ -26,10 +26,16 @@ describe("NavBar Component", () => {
     expect(screen.getByText("Contact me")).toBeInTheDocument();
 
     // Check if the LinkedIn link is rendered
-    expect(screen.getByAltText("Linkedin").closest('a')).toHaveAttribute('href', 'https://www.linkedin.com/in/manevdusko/');
+    expect(screen.getByAltText("Linkedin").closest("a")).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/manevdusko/"
+    );
 
     // Check if the mailto link is rendered
-    expect(screen.getByAltText("Email").closest('a')).toHaveAttribute('href', 'mailto:dushkomanev9@gmail.com');
+    expect(screen.getByAltText("Email").closest("a")).toHaveAttribute(
+      "href",
+      "mailto:dushkomanev9@gmail.com"
+    );
   });
 
   test("updates active link on click", () => {
