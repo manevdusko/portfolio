@@ -51,9 +51,9 @@ export const Projects = () => {
     {
       title: "Portfolio",
       description:
-        "My portfolio is built using React JS and showcases a comprehensive overview of my background, skills, and professional journey. It features essential information about my career, including my experience, projects, and technical expertise. I've designed it to provide an intuitive and engaging user experience, allowing visitors to easily navigate through different sections. You can explore the code and see the full project on GitHub",
+        "My portfolio, built with React.js and Firebase, highlights my skills, projects, and career journey. It features React-Bootstrap, CSS Modules, Animate.css, custom hooks, CI/CD, and intuitive navigation for a smooth, responsive user experience.",
       imgUrl: PortfolioImage,
-      githubLink: "https://github.com/manevdusko/To-the-moon",
+      githubLink: "https://github.com/manevdusko/portfolio",
     },
   ];
 

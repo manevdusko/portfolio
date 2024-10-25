@@ -34,7 +34,7 @@ export const NavBar = () => {
       className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
     >
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/portfolio">
           <span className={`${styles.logo}`}>m@nev</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
